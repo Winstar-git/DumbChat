@@ -2,7 +2,7 @@
 Simple Chatbot using Microsoft's DialoGPT
 This is a basic chatbot project built with Python, utilizing Microsoft's pre-trained DialoGPT model for AI integration. The chatbot is designed to engage in casual conversations, leveraging the natural language processing power of the DialoGPT model. While the bot can generate human-like responses, it may sometimes produce nonsensical or random answers, as it relies on a pre-trained model with limited context understanding.
 
-Features:
+##Features:
 
 -Conversational AI using DialoGPT.
 
@@ -10,7 +10,7 @@ Features:
 
 -Built using Python for easy integration and usage.
 
-Limitations:
+##Limitations:
 
 -Responses can be random or irrelevant at times due to the nature of the pre-trained model.
 
