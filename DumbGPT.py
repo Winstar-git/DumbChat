@@ -25,13 +25,13 @@ def chatbot_response(user_input, chat_history_ids=None):
     text_output = model.generate(
     chat_history_ids,
     do_sample=True,
-    max_length=200,  
+    max_length=100,  
     num_return_sequences=1,
     no_repeat_ngram_size=3, 
     repetition_penalty=1.1,
-    temperature=0.6,
+    temperature=0.3,
     top_k=40,
-    top_p=0.92,
+    top_p=0.85,
     pad_token_id=tokenizer.eos_token_id,
     attention_mask=attention_mask 
 )
@@ -43,7 +43,7 @@ def chatbot_response(user_input, chat_history_ids=None):
 
 
 root = tk.Tk()
-root.title("Talking Nonesense")
+root.title("DumbGPT Chatbot")
 
 screen_width = root.winfo_screenwidth()
 screen_height = root.winfo_screenheight()
@@ -63,6 +63,14 @@ chat_window.grid(row=0, column=0, padx=10, pady=10)
 
 user_input_entry = tk.Entry(root, width=40, font=("Arial", 12))
 user_input_entry.grid(row=1, column=0, padx=10, pady=10)
+
+
+def intro():
+    chat_window.config(state=tk.NORMAL)
+    chat_window.insert(tk.END, "DumbBot: Hello! I'm DumbBot.\n")
+    chat_window.yview(tk.END)
+    chat_window.config(state=tk.DISABLED)
+intro()
 
 def send_message():
     global chat_history
