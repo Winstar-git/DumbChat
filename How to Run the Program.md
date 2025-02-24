@@ -7,6 +7,7 @@ Follow these steps to successfully clone and run the project:
 First, create a file directory where you want to clone this repository to your local machine using Git:
 
 ---bash
+
 cd Documents
 
 mkdir Github
