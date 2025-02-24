@@ -4,9 +4,12 @@ Follow these steps to successfully clone and run the project:
 
 ## 1. Clone the Repository
 
-First, clone this repository to your local machine using Git:
+First, create a file directory where you want to clone this repository to your local machine using Git:
 
 ---bash
+cd Documents
+
+mkdir Github
 
 git clone https://github.com/Winstar-git/DumbChat.git
 
