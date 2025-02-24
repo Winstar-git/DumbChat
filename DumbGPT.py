@@ -35,12 +35,9 @@ def chatbot_response(user_input, chat_history_ids=None):
     pad_token_id=tokenizer.eos_token_id,
     attention_mask=attention_mask 
 )
-
-
     bot_response = tokenizer.decode(text_output[:, chat_history_ids.shape[-1]:][0], skip_special_tokens=True)
     chat_history_ids = chat_history_ids[:, -1024:]
     return bot_response, chat_history_ids
-
 
 root = tk.Tk()
 root.title("DumbGPT Chatbot")
@@ -56,14 +53,12 @@ position_left = int(screen_width / 2 - window_width / 2)
 
 root.geometry(f"{window_width}x{window_height}+{position_left}+{position_top}")
 
-
 chat_history = None
 chat_window = tk.Text(root, height=20, width=50, state=tk.DISABLED, bg="white", font=("Arial", 12))
 chat_window.grid(row=0, column=0, padx=10, pady=10)
 
 user_input_entry = tk.Entry(root, width=40, font=("Arial", 12))
 user_input_entry.grid(row=1, column=0, padx=10, pady=10)
-
 
 def intro():
     chat_window.config(state=tk.NORMAL)
@@ -81,7 +76,6 @@ def send_message():
         chat_window.yview(tk.END)
         chat_window.config(state=tk.DISABLED)
         bot_response, chat_history = chatbot_response(user_message, chat_history)
-
         chat_window.config(state=tk.NORMAL)
         chat_window.insert(tk.END, "DumbBot: " + bot_response + "\n")
         chat_window.yview(tk.END)
