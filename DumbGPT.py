@@ -1,5 +1,5 @@
 #James Starwin T. Canoy
-#BSCPE1-2
+#BSCPE 1-2
 #Feb 24, 2025
 
 from transformers import AutoModelForCausalLM, AutoTokenizer
