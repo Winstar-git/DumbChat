@@ -39,6 +39,9 @@ With the virtual environment activated, you can install the required Python pack
 
 pip install -r requirements.txt
 
+Other method is:
+pip install transformers torch
+
 ## 5. Run the Application
 Now you are ready to run the chatbot! Start the Python script:
 
